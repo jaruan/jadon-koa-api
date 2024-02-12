@@ -1,0 +1,96 @@
+{
+  "name": "jadon-koa-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaruan/jadon-koa-api.git"
+  },
+  "author": "Jadon Ruan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaruan/jadon-koa-api/issues"
+  },
+  "homepage": "https://github.com/jaruan/jadon-koa-api#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "prisma": {
+    "seed": "ts-node ./prisma/seeds/index.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.14.1",
+    "boom": "^7.3.0",
+    "dotenv": "^16.0.3",
+    "glob": "^10.2.6",
+    "ioredis": "^5.3.2",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.0",
+    "koa-joi-router": "^8.0.0",
+    "koa-joi-router-docs-v2": "^1.4.0",
+    "koa2-swagger-ui": "^5.7.0",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/boom": "^7.3.2",
+    "@types/jest": "^29.5.1",
+    "@types/koa__router": "^12.0.0",
+    "@types/koa-bodyparser": "^4.3.10",
+    "@types/koa-joi-router": "^8.0.4",
+    "@types/lodash": "^4.14.194",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "prettier-plugin-sql": "^0.14.0",
+    "prisma": "^4.14.1",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{ts,js}",
+      "!**/node_modules/**",
+      "!**/build/**",
+      "!**/coverage/**",
+      "!**/*.d.ts"
+    ],
+    "transform": {
+      "\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coverageReporters": [
+      "text",
+      "text-summary"
+    ],
+    "testRegex": "test/.*\\.test\\.(js|ts)x?$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/",
+      "/coverage/",
+      "/src/@types/"
+    ]
+  }
+}
