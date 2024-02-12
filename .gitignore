@@ -9,7 +9,7 @@ node_modules/
 *.njsproj
 *.sln
 
-docker/*
+docker/db/*
 
 build/
 

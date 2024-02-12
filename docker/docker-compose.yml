@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  jadon-koa-api-db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - ./db/data:/var/lib/mysql
+      - ./db/conf:/etc/mysql/conf.d
+    ports:
+      - '3306:3306'
+  jadon-koa-api-redis:
+    image: redis:7.2
+    restart: always
+    ports:
+      - '6379:6379'
+    environment:
+      REDIS_PASSWORD: password
