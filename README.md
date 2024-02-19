@@ -11,7 +11,7 @@ nvm use
 Install dependencies. I recommend that you use `yarn` to install dependencies.
 
 ```
-yarn install
+npm install
 ```
 
 ## Running locally
@@ -26,7 +26,6 @@ If you run up this project at the first time, you can execute the following comm
 
 ```
 make init-db
-
 ```
 
 The above are initialization steps. Once you finished, you could skip them in the future. Now, you can execute this command to start developing!
