@@ -1,4 +1,7 @@
-# jadon-koa-api
+# jadon-koa-practice
+
+## Introduction
+The best practice of Koa, Prisma, MySQL 
 
 ## Setup
 
